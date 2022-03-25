@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Terminal</title>
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script src="./typing/typing.js"></script>
+  <link rel="stylesheet" href="./typing/typing.css">
+  <link rel="stylesheet" href="./font-awesome/css/font-awesome.css">
+</head>
+<style>
+  body {
+    background: black;
+    color: #00FF02;
+    font-size: 18px;
+    font-family: courier;
+  }
+
+  blink {
+    display: inline;
+  }
+</style>
+
+<body>
+  <div id="source">
+    Test<br>
+    <p>> Test paragraph</p>
+    <ul>
+      <li>Test list items</li>
+      <li>Test list items</li>
+      <li>Test list items</li>
+    </ul>
+    > <i class="fa fa-github" aria-hidden="true"></i>
+    Test Link: <a href="http://google.com">Test link</a><br>
+  </div>
+  <div id="output-wrap">
+    <span id="output"></span>
+    <span class="typing-cursor">■</span>
+  </div>
+  <script>
+    var typing = new Typing({
+      source: document.getElementById('source'),
+      output: document.getElementById('output'),
+      delay: 50,
+      done: function () { }
+    });
+    typing.start();
+  </script>
+  <div>
+    <script type="text/javascript">
+      document.documentElement.style.fontSize = document.documentElement.clientWidth / 640 * 100 + 'px';
+      setTimeout("javascript:location.href='index.html'", 300000);
+    </script>
+</body>
+
+</html>
